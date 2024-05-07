@@ -13,6 +13,10 @@ body {
     margin: 0 auto;
 }
 
+main {
+    position: relative;
+    top: 80px;
+}
 
 h1 {
     font-size: 5.25rem;
@@ -42,6 +46,69 @@ p {
     font-size: 1.125rem;
 }
 
+
+/* navigation */
+
+header {
+    display: flex;
+    align-items: center; 
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #141416;
+    z-index: 999;
+}
+.square {
+  width: 2rem;
+  height: 2rem;
+  border: 0.1rem solid rgb(232, 138, 105);
+  box-shadow: 0px 0px 10px 10px rgba(238, 124, 83,0.64); 
+} 
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    line-height: 2rem;
+    margin: 0 2rem; 
+}
+
+.logo h5 {
+    margin-left: 1rem;
+    white-space: nowrap;
+}
+
+nav {
+    margin: 0 2rem;
+    width: 100%;
+}
+
+ul {
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ justify-content: flex-end;
+}
+
+
+nav li {
+    margin: 0 2rem;
+    list-style: none;
+    
+}
+
+nav li::before {
+    content: "//"
+}
+
+nav a {
+    color: whitesmoke;
+}
+
+/* Hero section */
+
+
 /* Rotating cube */
 
 .logo {
@@ -50,11 +117,12 @@ p {
 }
 
 .cube {
-    width:4rem;
-    height: 4rem;
+    position: relative;
+    width: 10rem;
+    height: 10rem;
     position: asolute;
-    top: 4rem;
-    left: 4rem;
+    top: 15rem;
+    left:40%;
     transform: rotateZ(45deg) ratateX(0) rotateY(0);
     transform-style: preserve-3d;
     animation: rotateCube 20s infinite linear;
@@ -84,6 +152,7 @@ p {
 
 .face {
     position: absolute;
+    padding: 6rem;
     top: 0;
     left: 0;
     right: 0;
@@ -101,68 +170,6 @@ p {
 .left { transform: rotateY(-90deg) translateZ(2rem); }
 .top { transform: rotateX(90deg) translateZ(2rem); }
 .bottom { transform: rotateX(-90deg) translateZ(2rem); }
-
-/* navigation */
-
-header {
-    display: flex;
-    align-items: center; 
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: #141416;
-    z-index: 999;
-}
-
-
-.logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.identity {
-    line-height: 2rem;
-    margin: 0 2rem; 
-}
-
-.identity h5 {
-    margin-left: 1rem;
-}
-
-nav {
-    margin: 0 2rem;
-    width: 100%;
-}
-
-ul {
- display: flex;
- flex-direction: row;
- align-items: center;
- justify-content: flex-end;
-}
-
-
-nav li {
-    margin: 0 2rem;
-    list-style: none;
-}
-
-nav li::before {
-    content: "//"
-}
-
-nav a {
-    color: whitesmoke;
-}
-
-
-
-main {
-    position: relative;
-    top: 80px;
-}
 
 
 /* arrow animation */
