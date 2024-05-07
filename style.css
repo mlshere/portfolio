@@ -95,7 +95,7 @@ ul {
 nav li {
     margin: 0 2rem;
     list-style: none;
-    
+    text-decoration: none;
 }
 
 nav li::before {
@@ -106,7 +106,29 @@ nav a {
     color: whitesmoke;
 }
 
+
 /* Hero section */
+.hero  {
+  height: 100vh;
+  position: relative;
+}
+
+.hero-text {
+  position: relative;
+  top: 8rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1;
+}
+
+h1 {
+  padding: 1rem;
+}
+
+.hero-text p {
+  padding: 0.5rem;
+}
 
 
 /* Rotating cube */
@@ -117,11 +139,10 @@ nav a {
 }
 
 .cube {
-    position: relative;
     width: 10rem;
     height: 10rem;
-    position: asolute;
-    top: 15rem;
+    position: absolute;
+    top: 8rem;
     left:40%;
     transform: rotateZ(45deg) ratateX(0) rotateY(0);
     transform-style: preserve-3d;
@@ -170,6 +191,8 @@ nav a {
 .left { transform: rotateY(-90deg) translateZ(2rem); }
 .top { transform: rotateX(90deg) translateZ(2rem); }
 .bottom { transform: rotateX(-90deg) translateZ(2rem); }
+
+
 
 
 /* arrow animation */
@@ -270,4 +293,13 @@ nav a {
     100% {
       opacity: 1;
     }
+  }
+
+  .arrow-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px; /* Adjust padding as needed */
+    z-index: 9999; /* Ensure it's above other content */
   }
