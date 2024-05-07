@@ -1,22 +1,21 @@
 /* navigation bar */
 
 $(document).ready(function() {
+    var navbar = $('#navbar');
 
-    // .scroll() creates an event when the user scrolls
+    // Show nav bar if already scrolled past the target section on page load
+    if ($(window).scrollTop() > $('#expertise').offset().top) {
+        navbar.removeClass('hidden');
+    }
+
     $(window).scroll(function() {
-  
-      // .scrollTop() retrieves vertical position of the scroll bar for the first element in a set of matched elements
-      var scroll = $(window).scrollTop();
-  
-      var objectSelect = $('#expertise');
-  
-      // .offset() retrieves current position of element relative to document
-      var objectPosition = objectSelect.offset().top;
-  
-      if (scroll > objectPosition) {
-        $('nav').addClass('displayNav');
-      } else {
-        $('nav').removeClass('displayNav');
-      }
+        var scroll = $(window).scrollTop();
+        var objectPosition = $('#expertise').offset().top;
+
+        if (scroll > objectPosition) {
+            navbar.removeClass('hidden');
+        } else {
+            navbar.addClass('hidden');
+        }
     });
-  });
+});
