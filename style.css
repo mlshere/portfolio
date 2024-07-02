@@ -471,6 +471,66 @@ h1 {
 
 
 /* My Work */
+.work {
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.work-card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+}
+
+.work-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px 8px 0 0;
+}
+
+.work-card-text {
+  padding: 1rem;
+}
+
+.work-card-text h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.work-card-text p {
+  color: #666666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.work-card-text button {
+  background-color: #ee7c53;
+  color: #ffffff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.work-card-text button:hover {
+  background-color: #f0815e;
+}
 
 
 .filters {
@@ -486,13 +546,19 @@ h1 {
 
 .filter-btn {
   margin-right: 10px;
-  background-color: #333;
-  color: #fff;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
+  color: white;
+  background: none;
+  font-size: 18px;
+}
+
+.filter-btn::before {
+  content: "//";
+  margin-right: .5rem;
 }
 
 .filter-btn:hover {
-  background-color: #555;
+  color: #555;
 }
