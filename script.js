@@ -19,3 +19,19 @@ $(document).ready(function() {
         }
     });
 });
+
+/* Data filter */
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project-card');
+  
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const category = button.getAttribute('data-category');
+  
+        projects.forEach(project => {
+          project.style.display = category === 'All' || project.getAttribute('data-category') === category ? 'block' : 'none';
+        });
+      });
+    });
+  });
